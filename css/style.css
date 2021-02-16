@@ -1,41 +1,31 @@
 /* change these */
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800");
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,700;0,900;1,200;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"); */
 
 * {
   box-sizing: border-box;
 }
 
-/* THIS IS ALL meant for editing. You might want to do it differently, 
-name the variables differently, 
-use the fonts in other ways in the font hierarchy etc. */
-
-/* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+  --bg-color: #2d2d2d;
+  --link-color: #2d2d2d;
+  --link-hover-color: #5a5a5a;
+  --color-4: #fdec40;
+  --color-5: #01a0b8;
 
-  --primary-font: "Open Sans", sans-serif;
-  --secondary-font: "Droid Serif", serif;
+  --primary-font: "Playfair Display", serif;
+  --secondary-font: "Nunito", sans-serif;
+  --third-font: "Raleway", sans-serif;
   --main-text-color: #000;
+  --secondary-text-color: white;
 
   --white-space: 1rem;
 }
 
-button {
-  transition: all 3s;
-}
-a {
-  transition: all 3s;
-}
 button:hover {
   background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
 }
 
 button:active {
@@ -44,7 +34,6 @@ button:active {
 
 a:hover {
   color: var(--link-hover-color);
-  font-size: 4rem;
 }
 html {
   font-size: 100%;
@@ -71,28 +60,27 @@ footer {
 }
 
 .header-wrapper h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
-  letter-spacing: -2px;
+  letter-spacing: 3px;
   padding-right: 0.75em;
-  font-weight: bold;
-  color: white;
+  font-weight: 500;
+  color: var(--color-4);
+  font-family: var(--secondary-font);
 }
 
 .header-wrapper h2 {
-  font-size: 1.6em;
+  font-size: 2em;
   color: rgba(255, 255, 255, 0.95);
-  font-weight: bold;
+  font-weight: 300;
   margin: var(--white-space) 0;
+  font-family: var(--third-font);
 }
 
 .header-wrapper h3 {
   font-size: 1.2rem;
+  font-family: var(--third-font);
   font-style: italic;
-}
-
-.header-wrapper h4 {
-  font-size: 0.8rem;
 }
 
 main {
@@ -104,10 +92,11 @@ section {
 }
 
 .section-heading {
-  font-style: italic;
-  font-size: 1.3rem;
-  color: #777;
+  font-size: 1.5rem;
+  color: var(--color-5);
   margin: 0.5rem 0;
+  font-family: var(--third-font);
+  font-weight: 550;
 }
 
 ul {
@@ -119,6 +108,14 @@ ul {
   margin-right: 5vw;
   height: 15vw;
   width: 20%;
+}
+
+.swatches p {
+  margin-top: 50%;
+  font-family: var(--third-font);
+  font-weight: 600;
+  text-align: center;
+  color: #2d2d2d;
 }
 
 ul li:last-child {
@@ -145,28 +142,6 @@ ul li:last-child {
   background-color: var(--color-5);
 }
 
-.textures li {
-  height: 30vw;
-  width: 40%;
-  margin-right: 5vw;
-}
-
-.texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
-}
-
-.texture-swatch-2 {
-  background: url(../img/subtle_grunge.png) top left repeat;
-}
-
-.texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
-}
-
-.texture-swatch-3 {
-  background: url(../img/white_paperboard.png) top left repeat;
-}
-
 .images ul {
   flex-direction: column;
   text-align: center;
@@ -180,29 +155,33 @@ ul li:last-child {
 
 button {
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 50px;
   background: var(--link-color);
   text-align: center;
   text-decoration: none;
-  font: bold 1.25em/1 var(--primary-font);
+  font: 1.2em/1 var(--secondary-font);
   letter-spacing: 1px;
   color: white;
   text-transform: uppercase;
-  text-shadow: 0px -1px 0px #0374a0;
-  transition: all 0.2s ease;
   cursor: pointer;
   margin: 0 1rem 1rem 0;
-}
-
-.secondary-button {
-  background: var(--color-5);
 }
 
 button:focus,
 button:active,
 button:focus-within {
-  outline: 0;
-  border-radius: 4px;
+  border-radius: 50px;
+}
+
+.social-media ul {
+  flex-direction: row;
+  justify-content: left;
+  font-size: 3rem;
+}
+
+.column .typography-main {
+  border: 2px solid #3f3f3f;
+  padding: 15px;
 }
 
 .typography-main {
@@ -210,36 +189,38 @@ button:focus-within {
 }
 
 .h1-sample {
-  font-size: 2.4rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: var(--primary-font);
 }
 
 .h2-sample {
   font-family: var(--secondary-font);
-  font-style: italic;
-  font-size: 1.25rem;
+  font-style: ;
+  font-size: 1.45rem;
 }
 
 p.typography-sample {
-  font-family: var(--secondary-font);
-  line-height: 1.5;
+  font-family: var(--third-font);
+  line-height: 2;
   max-width: 960px;
+  letter-spacing: 0.5px;
 }
 
 strong {
   font-weight: bold;
 }
 
-em {
-  font-style: italic;
+a.typography-sample {
+  font-family: var(--third-font);
+  color: #01a0b8;
 }
 
 a {
-  font-family: var(--primary-font);
+  font-family: var(--third-font);
   color: var(--link-color);
   font-weight: bold;
   text-decoration: none;
-  transition: all 0.2s;
 }
 
 p[class*="font-details-"] {
@@ -248,15 +229,6 @@ p[class*="font-details-"] {
   font-size: 0.75rem;
   font-family: var(--secondary-font);
   color: #6f6f6f;
-}
-
-.adjectives ul {
-  font-size: 2rem;
-  opacity: 0.5;
-}
-
-.adjectives ul {
-  flex-direction: column;
 }
 
 footer {
