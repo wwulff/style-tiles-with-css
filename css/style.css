@@ -32,9 +32,6 @@ button:active {
   background-color: var(--bg-color);
 }
 
-a:hover {
-  color: var(--link-hover-color);
-}
 html {
   font-size: 100%;
   font-family: var(--primary-font);
@@ -105,7 +102,7 @@ ul {
 }
 
 .swatches li {
-  margin-right: 5vw;
+  margin-right: 2vw;
   height: 15vw;
   width: 20%;
 }
@@ -159,7 +156,7 @@ button {
   background: var(--link-color);
   text-align: center;
   text-decoration: none;
-  font: 1.2em/1 var(--secondary-font);
+  font: 1em/1 var(--third-font);
   letter-spacing: 1px;
   color: white;
   text-transform: uppercase;
@@ -171,12 +168,6 @@ button:focus,
 button:active,
 button:focus-within {
   border-radius: 50px;
-}
-
-.social-media ul {
-  flex-direction: row;
-  justify-content: left;
-  font-size: 3rem;
 }
 
 .column .typography-main {
@@ -231,8 +222,37 @@ p[class*="font-details-"] {
   color: #6f6f6f;
 }
 
+.social-media > ul,
+i {
+  justify-content: left;
+
+  font-size: 2rem;
+  color: var(--bg-color);
+}
+
+.cards .container {
+  border: 2px solid var(--bg-color);
+}
+
+.container .card-heading {
+  font-size: 22px;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+}
+
+.container .sub-headings {
+  font-size: 18px;
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.container .card-body {
+  font-size: 13px;
+  font-family: var(--third-font);
+}
+
 footer {
-  font-style: italic;
 }
 
 @media (min-width: 800px) {
@@ -246,15 +266,5 @@ footer {
     margin-right: 3%;
     height: 10vw;
     width: 20%;
-  }
-
-  .textures li {
-    height: 15vw;
-  }
-}
-
-@media (min-width: 900px) {
-  .adjectives ul {
-    flex-direction: row;
   }
 }
