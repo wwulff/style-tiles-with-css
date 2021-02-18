@@ -216,7 +216,7 @@ a {
 
 p[class*="font-details-"] {
   margin-top: 0.5rem;
-  margin-bottom: calc(2 * var(--white-space));
+  margin-bottom: calc(1 * var(--white-space));
   font-size: 0.75rem;
   font-family: var(--secondary-font);
   color: #6f6f6f;
@@ -232,12 +232,14 @@ i {
 
 .cards .container {
   border: 2px solid var(--bg-color);
+  padding-left: 5px;
 }
 
 .container .card-heading {
   font-size: 22px;
   font-family: var(--secondary-font);
   font-weight: 700;
+  margin-top: 5px;
 }
 
 .container .sub-headings {
